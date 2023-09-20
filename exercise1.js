@@ -220,7 +220,7 @@ function calcularLongitudTotal(acumulador, cadena) {
   console.log("Longitud total de todas las cadenas:", longitudTotal);
   
 
-////////////////////////////////////////////////
+////////////////////////////////////////////////hola estoy probando actualizaciones en git hubbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 /**
  * Part 7
