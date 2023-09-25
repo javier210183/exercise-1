@@ -220,7 +220,6 @@ function calcularLongitudTotal(acumulador, cadena) {
   console.log("Longitud total de todas las cadenas:", longitudTotal);
   
 
-////////////////////////////////////////////////hola estoy probando actualizaciones en git hubbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 /**
  * Part 7
@@ -299,11 +298,54 @@ function esPar(numero) {
  */
 console.log("                       EXERCISE 1 - PART 9");
 
+/*Crea un objeto Map. La clave será el nombre de un estudiante y el valor será un arreglo con todas sus calificaciones de exámenes.
+
+Itera a través del Map y muestra el nombre de cada estudiante, las calificaciones separadas por '-', y el promedio de calificaciones (con 2 decimales).
+Ejemplo: Peter (7.60 - 2.50 - 6.25 - 9.00). Promedio: 6.34*/
+
+
+const estudiantes = new Map();
+
+estudiantes.set("DrSlump", [10, 8.24, 7.30, 4]);
+estudiantes.set("Vegeta",[6.91, 5.54, 8.97, 9.60]);
+estudiantes.set("Musculman", [2, 4.54, 10, 9.74]);
+estudiantes.set("SeñoritaScarlata",[0.25, 0.36, 1.39, 7.30]);
+
+let conseguirNotas = estudiantes.get("DrSlump");
+console.log("LAS NOTAS DEL DOCTOR SLUMP SON :",conseguirNotas);
+
+const notasDrSlump = estudiantes.get("DrSlump");
+const promedioDrSlump = notasDrSlump.reduce((acumulador, nota) => acumulador + nota, 0) / notasDrSlump.length;
+console.log("El promedio de DrSlump es:", promedioDrSlump.toFixed(2));
+
+
+
+
+estudiantes.forEach((notas, nombreEstudiante) => {
+  const promedioEstudiante = notas.reduce((acumulador, nota) => acumulador + nota, 0) / notas.length;
+  const calificacionesSeparadas = notas.join(' - ');
+  console.log(`${nombreEstudiante} notas ${calificacionesSeparadas}- Promedio: ${promedioEstudiante.toFixed(2)}`);
+});
+
 /**
  * Part 10
  * Create a function that receives an array, deletes its duplicated values and prints them.
  * Create a Set object from the array to delete the duplicated values.
  */
-console.log("EXERCISE 1 - PART 10");
+console.log("                     EXERCISE 1 - PART 10");
 
 
+
+function eliminarDuplicados(array){
+
+  let sinDuplicar = new Set(array);
+
+  let arregloUnico = [...sinDuplicar];
+
+  return console.log("LOS VALORES SIN DUPLICAR SON : " , arregloUnico);
+
+}
+
+
+const arrayParaArreglar = [1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,7,7,7,8,8,8,9,9,9];
+eliminarDuplicados(arrayParaArreglar);
